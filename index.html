@@ -38,7 +38,7 @@
           </li>
         </ul>
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
+          <a data-toggle="modal" id="loginId" >
             <span class="fa fa-sign-in"></span> Login
           </a>
         </span>
@@ -52,7 +52,7 @@
         <div class="modal-header">
           <h4 class="modal-title">Login</h4>
           <button type="button" class="close" data-dismiss="modal">
-            &times;
+            <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
@@ -101,7 +101,7 @@
 
         <div class="col-sm align-items-center">
           <span>
-            <a role="button" data-toggle="modal" data-target="#reserveTableModal"
+            <a role="button" data-toggle="modal" id="reserveTableId"
               class="btn btn-warning  btn-block nav-link text-white">
               <strong>
                 Reserve Table</strong>
@@ -119,8 +119,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Reserve a Table</h4>
-          <button type="button" class="close" data-dismiss="modal">
-            &times;
+          <button type="button" class="close"  data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
@@ -472,6 +472,21 @@
       });
     });
   </script>
+  <script>
+    $(document).ready(function () {
+      $('#loginId').click(function () {
+        $('#loginModal').modal('show')
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('#reserveTableId').click(function () {
+        $('#reserveTableModal').modal('show')
+      });
+    });
+  </script>
+
 </body>
 
 </html>
